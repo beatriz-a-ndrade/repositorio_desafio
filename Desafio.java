@@ -1,7 +1,7 @@
 /**
- * Esta classe contem os algoritmos dos exercÌcios do 
- * Desafio de ProgramaÁ„o Capgamini expressos como mÈtodos 
- * static. A intenÁ„o È facilitar os testes desses algoritmos. 
+ * Esta classe contem os algoritmos dos exerc√≠cios do 
+ * Desafio de Programa√ß√£o Capgemini expressos como m√©todos 
+ * static. A inten√ß√£o √© facilitar os testes desses algoritmos. 
  */
 
 import java.util.*;
@@ -10,19 +10,19 @@ public class Desafio {
 	
 	
 	/**
-	 * Esta classe contÈm os mÈtodos implementados como soluÁ„o da Quest„o 1.
+	 * Esta classe cont√©m os m√©todos implementados como solu√ß√£o da Quest√£o 1.
 	 */
 	public static class Questao1 {
 		
 	/**
 	 * Recebe um valor inteiro 'n' e imprime uma escada de tamanho 'n'.
 	 * @param n Tamanho da escada.
-	 * @return N„o retorna nenhum valor (void).
+	 * @return N√£o retorna nenhum valor (void).
 	 */
 		public static void imprime_escada(int n) {
 			
 			if(n < 0) {
-				System.out.println("N„o È permitido entradas menores que 0 (zero).");
+				System.out.println("N√£o √© permitido entradas menores que 0 (zero).");
 				return;
 			}
 			
@@ -38,35 +38,35 @@ public class Desafio {
 	
 	
 	/**
-	 * Esta classe contÈm os mÈtodos implementados como soluÁ„o da Quest„o 2.
+	 * Esta classe cont√©m os m√©todos implementados como solu√ß√£o da Quest√£o 2.
 	 */
 	public static class Questao2 {
 		
 		/**
-		 * Recebe uma String 'senha' e retorna um n˙mero inteiro indicando 
+		 * Recebe uma String 'senha' e retorna um n√∫mero inteiro indicando 
 		 * quantos caracteres faltam para uma senha segura.
 		 * 
 		 * @param senha Senha a ser avaliada.
-		 * @return n N˙mero de caracteres que faltam para uma senha segura.
+		 * @return n N√∫mero de caracteres que faltam para uma senha segura.
 		 */
 		public static int n_para_senha_segura(String senha) {
 			
-			Boolean[] conds = new Boolean[4]; 							// Array de condiÁıes para uma senha segura
+			Boolean[] conds = new Boolean[4]; 							// Array de condi√ß√µes para uma senha segura
 			String[] sc_list = new String("!@#$%^&*()-+").split(""); 	// Lista de caracteres especiais
 			
 			
-			conds[0] = senha.chars().anyMatch(c -> Character.isDigit((char) c));		// Verifica se contem dÌgitos
-			conds[1] = senha.chars().anyMatch(c -> Character.isLowerCase((char) c));	// Verifica se contem letras min˙sculas
-			conds[2] = senha.chars().anyMatch(c -> Character.isUpperCase((char) c));	// Verifica se contem letras mai˙sculas
+			conds[0] = senha.chars().anyMatch(c -> Character.isDigit((char) c));		// Verifica se contem d√≠gitos
+			conds[1] = senha.chars().anyMatch(c -> Character.isLowerCase((char) c));	// Verifica se contem letras min√∫sculas
+			conds[2] = senha.chars().anyMatch(c -> Character.isUpperCase((char) c));	// Verifica se contem letras mai√∫sculas
 			conds[3] = Arrays.stream(sc_list).anyMatch(senha::contains);				// Verifica se contem caracteres especiais
 			
 			
-			// Conta quantas condiÁıes de 'conds' n„o foram atendidas:
+			// Conta quantas condi√ß√µes de 'conds' n√£o foram atendidas:
 			int cont = (int) Arrays.stream(conds).filter(cond -> cond == false).count();
 			
 			
-			// Se o n˙mero de condiÁıes n„o atendidas È maior do que a quantidade de caracteres
-			// que faltam para o mÌnimo de 6, ent„o n = cont; caso contr·rio, n ser· o n˙mero de
+			// Se o n√∫mero de condi√ß√µes n√£o atendidas √© maior do que a quantidade de caracteres
+			// que faltam para o m√≠nimo de 6, ent√£o n = cont; caso contr√°rio, n ser√° o n√∫mero de
 			// caracteres que faltam para 6 caracteres:
 			int n = cont <= 6 - senha.length()? 6 - senha.length():cont;
 			
@@ -77,13 +77,13 @@ public class Desafio {
 	
 	
 	/**
-	 * Esta classe contÈm os mÈtodos implementados como soluÁ„o da Quest„o 3.
+	 * Esta classe cont√©m os m√©todos implementados como solu√ß√£o da Quest√£o 3.
 	 */
 	public static class Questao3 {
 		
 		/**
 		 * Recebe uma String 'str_in' e retorna uma ArrayList contendo
-		 * todas as substrings possÌveis.
+		 * todas as substrings poss√≠veis.
 		 * 
 		 * @param str_in String de entrada.
 		 * @return sub_str ArrayList contendo todas as substrings.
@@ -103,14 +103,14 @@ public class Desafio {
 		}
 		
 		/**
-		 * Quest„o 3 (mÈtodo auxiliar):
+		 * Quest√£o 3 (m√©todo auxiliar):
 		 * 
 		 * Recebe duas String's 'str1' e 'str2' retorna um valor booleano indicando
-		 *  se o par de entrada È um anagrama.
+		 *  se o par de entrada √© um anagrama.
 		 * 
 		 * @param str1 primeira String de entrada.
 		 * @param str2 segunda String de entrada.
-		 * @return booleano indicando se o par È anagrama.
+		 * @return booleano indicando se o par √© anagrama.
 		 */
 		public static boolean eh_anagrama(String str1, String str2) {
 			
@@ -124,13 +124,13 @@ public class Desafio {
 		}
 		
 		/**
-		 * Quest„o 3 (mÈtodo PRINCIPAL):
+		 * Quest√£o 3 (m√©todo PRINCIPAL):
 		 * 
 		 * Recebe uma String 'str_in' e retorna a contagem de todos os pares de 
-		 * anagrama possÌveis entre suas substrings.
+		 * anagrama poss√≠veis entre suas substrings.
 		 * 
-		 * Obs: Esta funÁ„o, como inferido pelo problema, n„o faz consideraÁıes
-		 * acerca da repetiÁ„o de subtrings!
+		 * Obs: Esta fun√ß√£o, como inferido pelo problema, n√£o faz considera√ß√µes
+		 * acerca da repeti√ß√£o de subtrings!
 		 * 
 		 * @param str_in String de entrada.
 		 * @return cont inteiro indicando a contagem de anagramas.
