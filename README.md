@@ -1,5 +1,5 @@
 # Resumo:
-Os algoritmos para as três questões do Desafio de Programação Capgemini estão agrupados na classe Desafio como métodos estáticos das classes estáticas Questao1, Questao2 e Questao3, estando estas aninhadas na classe Desafio. Assim, o método que implementa o algoritmo da Questão 1, por exemplo, pode ser acessado assim:
+Os algoritmos para as três questões do Desafio de Programação Capgemini estão agrupados na classe Desafio como métodos estáticos das classes estáticas Questao1, Questao2 e Questao3, estando estas aninhadas na classe Desafio. Assim, o método que implementa o algoritmo da Questão 1, por exemplo, pode ser usado em um código java assim:
 ```
 Desafio.Questao1.imprime_escada(n); // Consultar documentação desse método para mais detalhes.
 ```
