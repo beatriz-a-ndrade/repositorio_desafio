@@ -82,6 +82,8 @@ public class Desafio {
 	public static class Questao3 {
 		
 		/**
+		 * Questão 3 (método auxiliar):
+		 *
 		 * Recebe uma String 'str_in' e retorna uma ArrayList contendo
 		 * todas as substrings possíveis.
 		 * 
